@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% load static%}
+{%block content %}
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form onsubmit="return validateForm()" action="register.php" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <input type="submit" value="Register">
+        </form>
+    </div>
+    <script src="script.js"></script>
+
+{% endblock content %}
